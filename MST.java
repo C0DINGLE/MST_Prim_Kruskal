@@ -22,11 +22,11 @@ public class MST {
 
 
         // get a minimum spanning tree of g using Prim's MST alg.
-	Graph mst2 = Kruskal.getMST(g);
+	//Graph mst2 = Kruskal.getMST(g);
 	// save the MST in a file
-	fileGraph(mst2, "kmst");
+	//fileGraph(mst2, "kmst");
 	// report its total weight
-	System.out.println("Total Weight: " + totalWeight(mst2.edges()));
+	//System.out.println("Total Weight: " + totalWeight(mst2.edges()));
 
     }  
 
