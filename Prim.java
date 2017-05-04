@@ -24,13 +24,14 @@ public class Prim {
 
 		// Initialize an Edge [] so that I can build a heap with it
 		Edge [] gedges = new Edge [g.edges.size()];
+
 		// Construct a MinHeap with the edges of Graph g
 		int i = 0;
 		for (Edge e: g.edges) {
 			gedges[i] = e;
 			i++;
 		}
-		MinHeap<Edge> minHeap = new MinHeap<Edge>(gedges, g.edges.size(), 0);
+		MinHeap<Edge> minHeap = new MinHeap<Edge>(gedges, g.edges.size(), g.edges.size());
 		
 		// Build edge and vertex arraylists to store both respectively
 		ArrayList<Edge> edges = new ArrayList<Edge>();
@@ -46,6 +47,7 @@ public class Prim {
 				edges.add(e);
 			}
 		}
+		edges.add(minHeap.removeMin());
 		g.edges = edges;
 		g.vertices = vertices;
 		return g;
